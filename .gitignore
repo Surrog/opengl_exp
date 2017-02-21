@@ -27,3 +27,18 @@
 *.exe
 *.out
 *.app
+
+# CMake generated file
+*/CMakeFiles/*
+CMakeCache.txt
+cmake_install.cmake
+
+# Visual studio generated file
+*/.vs/*
+*.vcxproj
+*.filters
+*.ilk
+*.pdb
+*.tlog
+*.log
+*.sln
