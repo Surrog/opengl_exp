@@ -20,9 +20,13 @@ else ()
 endif()
 
 include_directories("${GLFW_ROOT}/include")
+include_directories("${PROJECT_SOURCE_DIR}/gl3w/include")
+include_directories("${PROJECT_SOURCE_DIR}/xtsslib")
 
 set (INTRO_PROJECT_SOURCES
 		${PROJECT_SOURCE_DIR}/intro/main.cpp
+		${PROJECT_SOURCE_DIR}/intro/gl_string.hpp
+		${PROJECT_SOURCE_DIR}/intro/gl_shader.hpp
 		)
 		
 add_executable(intro ${INTRO_PROJECT_SOURCES})
