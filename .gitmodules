@@ -1,3 +1,6 @@
 [submodule "xtsslib"]
 	path = xtsslib
 	url = https://github.com/Surrog/xtsslib.git
+[submodule "gl3w"]
+	path = gl3w
+	url = https://github.com/skaslev/gl3w.git
