@@ -27,6 +27,7 @@ set (INTRO_PROJECT_SOURCES
 		${PROJECT_SOURCE_DIR}/intro/main.cpp
 		${PROJECT_SOURCE_DIR}/intro/gl_string.hpp
 		${PROJECT_SOURCE_DIR}/intro/gl_shader.hpp
+		${PROJECT_SOURCE_DIR}/intro/gl_program.hpp
 		)
 		
 add_executable(intro ${INTRO_PROJECT_SOURCES})

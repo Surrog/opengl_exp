@@ -2,9 +2,7 @@
 #define AOPENGL_SHADER_HPP
 
 #include "gl_string.hpp"
-#include <gl\glcorearb.h>
-#include <gl\GL.h>
-#include "GL\gl3w.h"
+#include "gl_headers.hpp"
 
 namespace aopengl
 {
@@ -30,16 +28,22 @@ namespace aopengl
 		}
 		shader& operator=(shader&& orig)
 		{
-			id = orig.id;
-			orig.id = 0;
+			if (this != &orig)
+			{
+				id = orig.id;
+				orig.id = 0;
+			}
+			return *this;
+
 		}
 
-		shader(gl_string_view value, const SHADER_TYPE& type)
+		shader(string_view value, const SHADER_TYPE& type)
 		{
 			id = glCreateShader(type);
 			assert(id != 0);
 			GLint size = static_cast<GLint>(value.size());
-			glShaderSource(id, 1, &value.data(), &size);
+			auto* data = value.data();
+			glShaderSource(id, 1, &data , &size);
 			glCompileShader(id);
 		}
 

@@ -3,12 +3,12 @@
 
 #include <string>
 #include <astring_view.hpp>
-#include <GL\glcorearb.h>
+#include "gl_headers.hpp"
 
 namespace aopengl
 {
-	using gl_string = std::basic_string<GLchar>;
-	using gl_string_view = astd::basic_string_view<GLchar>;
+	using string = std::basic_string<GLchar>;
+	using string_view = astd::basic_string_view<GLchar>;
 }
 
 #endif //!GL_STRING_HPP
