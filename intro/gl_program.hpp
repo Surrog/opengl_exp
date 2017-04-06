@@ -29,17 +29,11 @@ namespace aopengl
 
 		program(program&& orig)
 		{
-			id = orig.id;
-			orig.id = 0;
+			if (this != &orig) { id = orig.id; orig.id = 0; }
 		}
 		program& operator=(program&& orig)
 		{
-			if (this != &orig)
-			{
-				id = orig.id;
-				orig.id = 0;
-			}
-			return *this;
+			if (this != &orig) { id = orig.id; orig.id = 0; } return *this;
 		}
 
 		~program()

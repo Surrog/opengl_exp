@@ -33,8 +33,11 @@ include_directories(${OPENGL_INCLUDE_DIR})
 
 
 set (INTRO_PROJECT_SOURCES
+		${PROJECT_SOURCE_DIR}/intro/gl_color.hpp
 		${PROJECT_SOURCE_DIR}/intro/gl_headers.hpp
+		${PROJECT_SOURCE_DIR}/intro/gl_primitive.hpp
 		${PROJECT_SOURCE_DIR}/intro/gl_program.hpp
+		${PROJECT_SOURCE_DIR}/intro/gl_render.hpp
 		${PROJECT_SOURCE_DIR}/intro/gl_shader.hpp
 		${PROJECT_SOURCE_DIR}/intro/gl_string.hpp
 		${PROJECT_SOURCE_DIR}/intro/gl_vertex_array_object.hpp

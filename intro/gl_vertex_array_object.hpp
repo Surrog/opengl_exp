@@ -17,8 +17,10 @@ namespace aopengl
 		vertex_array(const vertex_array&) = delete;
 		vertex_array& operator=(const vertex_array&) = delete;
 
-		vertex_array(vertex_array&& orig) { id = orig.id; orig.id = 0; }
-		vertex_array& operator=(vertex_array&& orig) { id = orig.id; orig.id = 0; return *this; }
+		vertex_array(vertex_array&& orig) { if (this != &orig) { id = orig.id; orig.id = 0; } }
+		vertex_array& operator=(vertex_array&& orig) { 
+			if (this != &orig) { id = orig.id; orig.id = 0; } return *this;
+		}
 
 
 		~vertex_array()

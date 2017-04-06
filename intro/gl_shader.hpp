@@ -23,18 +23,11 @@ namespace aopengl
 
 		shader(shader&& orig)
 		{
-			id = orig.id;
-			orig.id = 0;
+			if (this != &orig) { id = orig.id; orig.id = 0; }
 		}
 		shader& operator=(shader&& orig)
 		{
-			if (this != &orig)
-			{
-				id = orig.id;
-				orig.id = 0;
-			}
-			return *this;
-
+			if (this != &orig) { id = orig.id; orig.id = 0; } return *this;
 		}
 
 		shader(string_view value, const SHADER_TYPE& type)
