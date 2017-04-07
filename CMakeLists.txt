@@ -30,17 +30,21 @@ include_directories("${GLFW_ROOT}/include")
 include_directories("${PROJECT_SOURCE_DIR}/gl3w/include")
 include_directories("${PROJECT_SOURCE_DIR}/xtsslib")
 include_directories(${OPENGL_INCLUDE_DIR})
+include_directories("${PROJECT_SOURCE_DIR}/aopengl")
+include_directories("${PROJECT_SOURCE_DIR}/asystem")
 
 
 set (INTRO_PROJECT_SOURCES
-		${PROJECT_SOURCE_DIR}/intro/gl_color.hpp
-		${PROJECT_SOURCE_DIR}/intro/gl_headers.hpp
-		${PROJECT_SOURCE_DIR}/intro/gl_primitive.hpp
-		${PROJECT_SOURCE_DIR}/intro/gl_program.hpp
-		${PROJECT_SOURCE_DIR}/intro/gl_render.hpp
-		${PROJECT_SOURCE_DIR}/intro/gl_shader.hpp
-		${PROJECT_SOURCE_DIR}/intro/gl_string.hpp
-		${PROJECT_SOURCE_DIR}/intro/gl_vertex_array_object.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_color.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_headers.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_primitive.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_program.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_render.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_shader.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_string.hpp
+		${PROJECT_SOURCE_DIR}/aopengl/gl_vertex_array_object.hpp
+		${PROJECT_SOURCE_DIR}/asystem/sys_application.hpp
+		${PROJECT_SOURCE_DIR}/asystem/sys_windows.hpp
 		${PROJECT_SOURCE_DIR}/intro/main.cpp
 		)
 

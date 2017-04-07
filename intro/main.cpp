@@ -13,6 +13,9 @@
 #include "gl_shader.hpp"
 #include "gl_program.hpp"
 
+#include "sys_windows.hpp"
+#include "sys_application.hpp"
+
 #include <string_view>
 
 using namespace std::string_literals;
@@ -40,12 +43,20 @@ void main(void)
 
 int main()
 {
-	std::array<aopengl::shader, 2> shaders{
-		aopengl::shader(basic_vertex_shader_source, aopengl::shader::VERTEX)
-		, aopengl::shader(basic_fragment_shader_source, aopengl::shader::FRAGMENT)
-	};
+	asystem::application app;
+	asystem::windows win;
+	win.info.title = "intro";
 
-	aopengl::program prog(shaders);
+	win.start_window();
+
+	aopengl::shader vs(basic_vertex_shader_source, aopengl::shader::VERTEX);
+
+	//std::array<aopengl::shader, 2> shaders{
+	//	
+	//	, aopengl::shader(basic_fragment_shader_source, aopengl::shader::FRAGMENT)
+	//};
+
+	//aopengl::program prog(shaders);
 
 	return 0;
 }
